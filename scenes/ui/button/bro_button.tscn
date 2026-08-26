@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b1w18khkcjk5f"]
+
+[ext_resource type="Script" uid="uid://byxev0poenmc5" path="res://scenes/ui/button/bro_button.gd" id="1_fqg6s"]
+[ext_resource type="Script" uid="uid://bpfmiym8fs6pp" path="res://scenes/ui/button/bro_button_config.gd" id="2_4rsoq"]
+
+[sub_resource type="Resource" id="Resource_fqg6s"]
+script = ExtResource("2_4rsoq")
+corner_radius = 12
+metadata/_custom_type_script = "uid://bpfmiym8fs6pp"
+
+[node name="BroButton" type="Button" unique_id=168831737]
+custom_minimum_size = Vector2(100, 36)
+offset_right = 100.0
+offset_bottom = 36.0
+script = ExtResource("1_fqg6s")
+config = SubResource("Resource_fqg6s")

@@ -1,0 +1,242 @@
+[gd_scene format=3 uid="uid://rghg76awgr2h"]
+
+[ext_resource type="PackedScene" uid="uid://b1w18khkcjk5f" path="res://scenes/ui/button/bro_button.tscn" id="1_ftvbe"]
+[ext_resource type="Script" uid="uid://bpfmiym8fs6pp" path="res://scenes/ui/button/bro_button_config.gd" id="2_ccbgh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccbgh"]
+bg_color = Color(0.015686275, 0.6666667, 0.8117647, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7hxd"]
+bg_color = Color(0.014140364, 0.60096604, 0.73176473, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo2rd"]
+bg_color = Color(0.017232146, 0.7323669, 0.8917647, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frb25"]
+bg_color = Color(0.56, 0.6744827, 0.7, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pibyo"]
+bg_color = Color(0.21960784, 0.7294118, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5jt4"]
+bg_color = Color(0.1955218, 0.6494118, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yp0e1"]
+bg_color = Color(0.24369383, 0.80941176, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5hdi"]
+bg_color = Color(0.60215056, 0.7, 0.56, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="Resource" id="Resource_f5hdi"]
+script = ExtResource("2_ccbgh")
+type = 1
+corner_radius = 12
+metadata/_custom_type_script = "uid://bpfmiym8fs6pp"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wlua"]
+bg_color = Color(0.5372549, 0.007843138, 0.7607843, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dx4p"]
+bg_color = Color(0.4807601, 0.0070183957, 0.68078434, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kd1ve"]
+bg_color = Color(0.59374976, 0.00866788, 0.8407843, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c4x8"]
+bg_color = Color(0.6584375, 0.56, 0.7, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="Resource" id="Resource_4c4x8"]
+script = ExtResource("2_ccbgh")
+type = 2
+corner_radius = 12
+metadata/_custom_type_script = "uid://bpfmiym8fs6pp"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g20qo"]
+bg_color = Color(0.75686276, 0.6313726, 0.011764706, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7usd"]
+bg_color = Color(0.6768628, 0.5646368, 0.010521194, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqfpm"]
+bg_color = Color(0.83686274, 0.6981083, 0.0130082425, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qddei"]
+bg_color = Color(0.7, 0.67642105, 0.56, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="Resource" id="Resource_qddei"]
+script = ExtResource("2_ccbgh")
+type = 3
+corner_radius = 12
+metadata/_custom_type_script = "uid://bpfmiym8fs6pp"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucfgr"]
+bg_color = Color(0.75686276, 0.2, 0.011764706, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqj1a"]
+bg_color = Color(0.6768628, 0.17886008, 0.010521194, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riogs"]
+bg_color = Color(0.83686274, 0.22113986, 0.0130082425, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsyfi"]
+bg_color = Color(0.7, 0.59536844, 0.56, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="Resource" id="Resource_bsyfi"]
+script = ExtResource("2_ccbgh")
+type = 4
+corner_radius = 12
+metadata/_custom_type_script = "uid://bpfmiym8fs6pp"
+
+[node name="UIDashboard" type="Control" unique_id=183443580]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=738599304]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=409477299]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="BroButtons" type="HBoxContainer" parent="MarginContainer" unique_id=1161265564]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BroButton_Default" parent="MarginContainer/BroButtons" unique_id=168831737 instance=ExtResource("1_ftvbe")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ccbgh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s7hxd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vo2rd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_frb25")
+text = "Default"
+
+[node name="BroButton_Common" parent="MarginContainer/BroButtons" unique_id=1683954952 instance=ExtResource("1_ftvbe")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pibyo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x5jt4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yp0e1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_f5hdi")
+text = "Common"
+config = SubResource("Resource_f5hdi")
+
+[node name="BroButton_RARE" parent="MarginContainer/BroButtons" unique_id=593961589 instance=ExtResource("1_ftvbe")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_7wlua")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6dx4p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kd1ve")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4c4x8")
+text = "RARE"
+config = SubResource("Resource_4c4x8")
+
+[node name="BroButton_EPIC" parent="MarginContainer/BroButtons" unique_id=1172306179 instance=ExtResource("1_ftvbe")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_g20qo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v7usd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vqfpm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_qddei")
+text = "EPIC"
+config = SubResource("Resource_qddei")
+
+[node name="BroButton_Legend" parent="MarginContainer/BroButtons" unique_id=149607905 instance=ExtResource("1_ftvbe")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ucfgr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wqj1a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_riogs")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bsyfi")
+text = "Legend"
+config = SubResource("Resource_bsyfi")
