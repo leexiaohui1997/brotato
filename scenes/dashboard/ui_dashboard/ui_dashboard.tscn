@@ -5,6 +5,11 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccbgh"]
 bg_color = Color(0.015686275, 0.6666667, 0.8117647, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.013367417, 0.5681158, 0.6917647, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -12,6 +17,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7hxd"]
 bg_color = Color(0.014140364, 0.60096604, 0.73176473, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.011821526, 0.50241536, 0.6117647, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -19,6 +29,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo2rd"]
 bg_color = Color(0.017232146, 0.7323669, 0.8917647, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.014913308, 0.63381624, 0.7717647, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -26,13 +41,29 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frb25"]
 bg_color = Color(0.56, 0.6744827, 0.7, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.54, 0.58906406, 0.6, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
+[sub_resource type="Resource" id="Resource_pibyo"]
+script = ExtResource("2_ccbgh")
+corner_radius = 12
+border_width = 4
+metadata/_custom_type_script = "uid://bpfmiym8fs6pp"
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pibyo"]
 bg_color = Color(0.21960784, 0.7294118, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.18347879, 0.6094118, 0, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -40,6 +71,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5jt4"]
 bg_color = Color(0.1955218, 0.6494118, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.15939277, 0.5294118, 0, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -47,6 +83,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yp0e1"]
 bg_color = Color(0.24369383, 0.80941176, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.2075648, 0.68941176, 0, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -54,6 +95,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5hdi"]
 bg_color = Color(0.60215056, 0.7, 0.56, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.5580645, 0.6, 0.54, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -63,10 +109,16 @@ corner_radius_bottom_left = 12
 script = ExtResource("2_ccbgh")
 type = 1
 corner_radius = 12
+border_width = 4
 metadata/_custom_type_script = "uid://bpfmiym8fs6pp"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wlua"]
 bg_color = Color(0.5372549, 0.007843138, 0.7607843, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.45251265, 0.006606024, 0.6407843, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -74,6 +126,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dx4p"]
 bg_color = Color(0.4807601, 0.0070183957, 0.68078434, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.39601782, 0.005781282, 0.56078434, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -81,6 +138,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kd1ve"]
 bg_color = Color(0.59374976, 0.00866788, 0.8407843, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.50900745, 0.0074307667, 0.7207843, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -88,6 +150,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c4x8"]
 bg_color = Color(0.6584375, 0.56, 0.7, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.58218753, 0.54, 0.6, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -97,10 +164,16 @@ corner_radius_bottom_left = 12
 script = ExtResource("2_ccbgh")
 type = 2
 corner_radius = 12
+border_width = 4
 metadata/_custom_type_script = "uid://bpfmiym8fs6pp"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g20qo"]
 bg_color = Color(0.75686276, 0.6313726, 0.011764706, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.63686275, 0.53126895, 0.009899431, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -108,6 +181,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7usd"]
 bg_color = Color(0.6768628, 0.5646368, 0.010521194, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.5568628, 0.4645332, 0.008655907, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -115,6 +193,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqfpm"]
 bg_color = Color(0.83686274, 0.6981083, 0.0130082425, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.71686274, 0.5980047, 0.011142955, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -122,6 +205,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qddei"]
 bg_color = Color(0.7, 0.67642105, 0.56, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.6, 0.5898948, 0.54, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -131,10 +219,16 @@ corner_radius_bottom_left = 12
 script = ExtResource("2_ccbgh")
 type = 3
 corner_radius = 12
+border_width = 4
 metadata/_custom_type_script = "uid://bpfmiym8fs6pp"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucfgr"]
 bg_color = Color(0.75686276, 0.2, 0.011764706, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.63686275, 0.16829014, 0.009899431, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -142,6 +236,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqj1a"]
 bg_color = Color(0.6768628, 0.17886008, 0.010521194, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.5568628, 0.14715025, 0.008655907, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -149,6 +248,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riogs"]
 bg_color = Color(0.83686274, 0.22113986, 0.0130082425, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.71686274, 0.18943003, 0.011142955, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -156,6 +260,11 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsyfi"]
 bg_color = Color(0.7, 0.59536844, 0.56, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.6, 0.5551579, 0.54, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -165,6 +274,7 @@ corner_radius_bottom_left = 12
 script = ExtResource("2_ccbgh")
 type = 4
 corner_radius = 12
+border_width = 4
 metadata/_custom_type_script = "uid://bpfmiym8fs6pp"
 
 [node name="UIDashboard" type="Control" unique_id=183443580]
@@ -204,6 +314,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_s7hxd")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vo2rd")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_frb25")
 text = "Default"
+config = SubResource("Resource_pibyo")
 
 [node name="BroButton_Common" parent="MarginContainer/BroButtons" unique_id=1683954952 instance=ExtResource("1_ftvbe")]
 layout_mode = 2

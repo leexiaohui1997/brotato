@@ -1,5 +1,6 @@
 class_name ColorUtils
 
+# ===== 背景色参数 =====
 # Hover 亮度提升量
 const HOVER_LIGHTNESS_DELTA := 0.08
 # Active 亮度降低量
@@ -8,6 +9,18 @@ const ACTIVE_LIGHTNESS_DELTA := -0.08
 const DISABLED_SATURATION := 0.20
 # Disabled 明度目标值
 const DISABLED_VALUE := 0.70
+
+# ===== 边框色参数 =====
+# 边框相对背景色的亮度偏移
+const BORDER_LIGHTNESS_DELTA := -0.12
+# Hover 边框相对 Hover 背景的偏移
+const BORDER_HOVER_LIGHTNESS_DELTA := -0.12
+# Active 边框相对 Active 背景的偏移
+const BORDER_ACTIVE_LIGHTNESS_DELTA := -0.12
+# Disabled 边框饱和度
+const BORDER_DISABLED_SATURATION := 0.10
+# Disabled 边框明度
+const BORDER_DISABLED_VALUE := 0.60
 
 # 颜色类型
 enum ColorType {
@@ -47,4 +60,22 @@ static func generate(base_color: Color) -> Dictionary:
 		"hover": hover_color,
 		"pressed": active_color,
 		"disabled": disabled_color
+	}
+
+## 根据状态色值生成边框色值
+static func generate_border_colors(colors: Dictionary) -> Dictionary:
+	var h = colors.normal.h
+	var s = colors.normal.s
+	var v = colors.normal.v
+
+	var normal := Color.from_hsv(h, s, clampf(v + BORDER_LIGHTNESS_DELTA, 0.0, 1.0))
+	var hover := Color.from_hsv(h, s, clampf(colors.hover.v + BORDER_HOVER_LIGHTNESS_DELTA, 0.0, 1.0))
+	var pressed := Color.from_hsv(h, s, clampf(colors.pressed.v + BORDER_ACTIVE_LIGHTNESS_DELTA, 0.0, 1.0))
+	var disabled := Color.from_hsv(h, BORDER_DISABLED_SATURATION, BORDER_DISABLED_VALUE)
+	
+	return {
+		"normal": normal,
+		"hover": hover,
+		"pressed": pressed,
+		"disabled": disabled
 	}
