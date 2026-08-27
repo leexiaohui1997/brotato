@@ -16,13 +16,14 @@ var rng: RandomNumberGenerator
 func generate() -> void:
 	var map_layer := Node2D.new()
 	for i in range(3):
-		var layer := TILE_MAP_LAYER.instantiate() as TileMapLayer
+		var layer := TILE_MAP_LAYER.instantiate() as MapGenerateTile
 		layer.name = ["BG", "Shadow", "Deco"][i]
 		layer.use_parent_material = true
+		var tiles = layer.get_tiles(i)
 		for x in range(size_w):
 			for y in range(size_h):
-				var atlas_index = rng.rand_weighted(MapGenerateTile.TILES[i][1])
-				var atlas_coords = MapGenerateTile.TILES[i][0][atlas_index]
+				var atlas_index = rng.rand_weighted(tiles[1])
+				var atlas_coords = tiles[0][atlas_index]
 				layer.set_cell(Vector2i(x, y), 0, atlas_coords)
 		map_layer.add_child(layer)
 		if i == 0:

@@ -1,17 +1,34 @@
 extends TileMapLayer
 class_name MapGenerateTile
 
-const BG_TILES = [Vector2i(0, 4), Vector2i(1, 4)]
-const BG_WEIGHTS = [1, 0.005]
+var tile_datas: Dictionary[int, Array] = {}
+func load_tile_datas():
+	if tile_datas.size():
+		return tile_datas
+	for sidx in tile_set.get_source_count():
+		var sid := tile_set.get_source_id(sidx)
+		var s := tile_set.get_source(sid)
+		tile_datas[sid] = []
+		for tidx in s.get_tiles_count():
+			var tvec := s.get_tile_id(tidx)
+			var t := s.get_tile_data(tvec, 0) as TileData
+			tile_datas[sid].append([t, tvec])
+	return tile_datas
 
-const SHADOW_TILES = [Vector2i(2, 4), Vector2i(12, 0)]
-const SHADOW_WEIGHTS = [0.002, 1]
+func get_tiles(terrain: int) -> Array:
+	var result: Array = [[], []]
+	var data = load_tile_datas()[0]
 
-const DECO_TILES = [Vector2i(3, 4), Vector2i(4, 4), Vector2i(5, 4), Vector2i(12, 0)]
-const DECO_WEIGHTS = [0.002, 0.002, 0.002, 1]
+	# 非背景层叠加空白层
+	var ters = [terrain]
+	if terrain != 0:
+		ters.append(3)
 
-const TILES = [
-	[BG_TILES, BG_WEIGHTS],
-	[SHADOW_TILES, SHADOW_WEIGHTS],
-	[DECO_TILES, DECO_WEIGHTS]
-]
+	for item in data:
+		var t: TileData = item[0]
+		var tvec: Vector2i = item[1]
+		if not ters.has(t.terrain):
+			continue
+		result[0].append(tvec)
+		result[1].append(t.probability)
+	return result
