@@ -35,9 +35,17 @@ func apply_config() -> void:
 	shadow.visible = config.show_shadow
 	anim_player.play(config.animation)
 
+func update_position(delta: float) -> void:
+	if direction == Vector2.ZERO:
+		return
+	position += direction * speed * delta
+	if Global.game:
+		var map = Global.game.map_node
+		position.x = clampf(position.x, map.map_start_pos.x, map.map_end_pos.x)
+		position.y = clampf(position.y, map.map_start_pos.y, map.map_end_pos.y)
+
 func _ready() -> void:
 	apply_config()
 
 func _physics_process(delta: float) -> void:
-	if direction != Vector2.ZERO:
-		position += direction * speed * delta
+	update_position(delta)

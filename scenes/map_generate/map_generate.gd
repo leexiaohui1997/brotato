@@ -12,6 +12,9 @@ const TILE_MAP_SCALE := TILE_SIZE / 125.0
 @export var shader_color: Color = "#009d00"
 
 var map_size: Vector2i
+var map_start_pos: Vector2
+var map_end_pos: Vector2
+
 var rng: RandomNumberGenerator
 
 func generate() -> void:
@@ -30,6 +33,8 @@ func generate() -> void:
 		map_layer.add_child(layer)
 		if i == 0:
 			map_size = layer.get_used_rect().end * TILE_SIZE
+			map_start_pos = Vector2(TILE_SIZE / 2.0, TILE_SIZE)
+			map_end_pos = Vector2(float(map_size.x) - map_start_pos.x, float(map_size.y))
 	map_layer.material = create_material()
 	map_layer.scale = Vector2.ONE * TILE_MAP_SCALE
 	add_child(map_layer)

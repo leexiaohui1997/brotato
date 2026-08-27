@@ -14,6 +14,10 @@ config/name="brotato"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://bw2q6qcb8lerg"
+
 [display]
 
 window/size/viewport_width=1024

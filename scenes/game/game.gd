@@ -29,8 +29,8 @@ func generate_map() -> void:
 ## 生成玩家
 func generate_player() -> void:
 	var born_pos := map_config.player_born_pos if map_config else Vector2i(
-		randi_range(0, map_node.map_size.x),
-		randi_range(0, map_node.map_size.y)
+		randi_range(ceil(map_node.map_start_pos.x), floor(map_node.map_end_pos.x)),
+		randi_range(ceil(map_node.map_start_pos.y), floor(map_node.map_end_pos.y))
 	)
 	player = UNIT_BASE.instantiate()
 	player.name = "Player"
@@ -57,3 +57,9 @@ func _ready() -> void:
 	generate_map()
 	generate_player()
 	generate_camera()
+
+func _enter_tree() -> void:
+	Global.game = self
+
+func _exit_tree() -> void:
+	Global.game = null
