@@ -14,6 +14,7 @@ const CAMERA_ZOOM = 1.5
 var map_node: MapGenerate
 var player: UnitBase
 var camera: Camera2D
+var enemy_uid := 1
 
 ## 生成游戏地图
 func generate_map() -> void:
@@ -28,10 +29,7 @@ func generate_map() -> void:
 
 ## 生成玩家
 func generate_player() -> void:
-	var born_pos := map_config.player_born_pos if map_config else Vector2i(
-		randi_range(ceil(map_node.map_start_pos.x), floor(map_node.map_end_pos.x)),
-		randi_range(ceil(map_node.map_start_pos.y), floor(map_node.map_end_pos.y))
-	)
+	var born_pos := map_config.player_born_pos if map_config else get_born_pos()
 	player = UNIT_BASE.instantiate()
 	player.name = "Player"
 	player.config = UnitConfig.new()
@@ -53,6 +51,22 @@ func generate_camera() -> void:
 	camera.limit_bottom = map_node.map_size.y
 	player.add_child(camera)
 
+## 生成敌人
+func spawn_enemy() -> void:
+	var enemy := UNIT_BASE.instantiate() as UnitBase
+	enemy.name = "Enemy_%d" % [enemy_uid]
+	enemy_uid += 1
+	enemy.config = UnitConfig.new()
+	enemy.config.type = UnitConfig.EnemyUnit.values().pick_random()
+	enemy.position = get_born_pos()
+	entities.add_child(enemy)
+
+## 获取初始位置
+func get_born_pos() -> Vector2i:
+	var units: Array[UnitBase] = []
+	units.assign(entities.find_children("*", "UnitBase", false, false))
+	return CoordUtils.get_random_pos(map_node.map_start_pos, map_node.map_end_pos, units)
+
 func _ready() -> void:
 	generate_map()
 	generate_player()
@@ -63,3 +77,6 @@ func _enter_tree() -> void:
 
 func _exit_tree() -> void:
 	Global.game = null
+
+func _on_spawn_enemy_timer_timeout() -> void:
+	spawn_enemy()

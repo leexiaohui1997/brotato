@@ -8,3 +8,10 @@ player_unit = 4
 
 [node name="Entities" type="Node2D" parent="." unique_id=1909316503]
 z_index = 1
+
+[node name="Timers" type="Node" parent="." unique_id=690701227]
+
+[node name="SpawnEnemyTimer" type="Timer" parent="Timers" unique_id=1566036557]
+autostart = true
+
+[connection signal="timeout" from="Timers/SpawnEnemyTimer" to="." method="_on_spawn_enemy_timer_timeout"]

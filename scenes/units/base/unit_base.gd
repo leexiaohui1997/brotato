@@ -2,6 +2,8 @@
 extends Node2D
 class_name UnitBase
 
+const UNIT_RADIUS := 50
+
 @onready var shadow: Sprite2D = %Shadow
 @onready var sprite: Sprite2D = %Sprite2D
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
