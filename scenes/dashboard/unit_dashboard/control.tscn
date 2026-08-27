@@ -1,0 +1,530 @@
+[gd_scene format=3 uid="uid://ujv6xsh8dn54"]
+
+[ext_resource type="Script" uid="uid://di0qx3rpbm6u7" path="res://scenes/dashboard/unit_dashboard/control.gd" id="1_1v0t8"]
+[ext_resource type="PackedScene" uid="uid://c1l18o0sk0hw1" path="res://scenes/units/base/unit_base.tscn" id="1_4p4n2"]
+[ext_resource type="Script" uid="uid://dwmhpxfm0uu3" path="res://scenes/units/base/unit_config.gd" id="2_asnfg"]
+[ext_resource type="PackedScene" uid="uid://b1w18khkcjk5f" path="res://scenes/ui/button/bro_button.tscn" id="3_asnfg"]
+[ext_resource type="Script" uid="uid://bpfmiym8fs6pp" path="res://scenes/ui/button/bro_button_config.gd" id="5_onp5p"]
+
+[sub_resource type="Resource" id="Resource_33sww"]
+script = ExtResource("2_asnfg")
+animation = "RESET"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_1v0t8"]
+script = ExtResource("2_asnfg")
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_onp5p"]
+script = ExtResource("2_asnfg")
+animation = "move"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_4p4n2"]
+script = ExtResource("2_asnfg")
+animation = "die"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_asnfg"]
+script = ExtResource("2_asnfg")
+type = 1
+animation = "RESET"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_bf48r"]
+script = ExtResource("2_asnfg")
+type = 1
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_auc84"]
+script = ExtResource("2_asnfg")
+type = 1
+animation = "move"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_qjim3"]
+script = ExtResource("2_asnfg")
+type = 1
+animation = "die"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_piaxk"]
+script = ExtResource("2_asnfg")
+type = 2
+animation = "RESET"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_ou0lt"]
+script = ExtResource("2_asnfg")
+type = 2
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_i2isr"]
+script = ExtResource("2_asnfg")
+type = 2
+animation = "move"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_t25fm"]
+script = ExtResource("2_asnfg")
+type = 2
+animation = "die"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_cm5uf"]
+script = ExtResource("2_asnfg")
+type = 3
+animation = "RESET"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_6cg25"]
+script = ExtResource("2_asnfg")
+type = 3
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_5hdwq"]
+script = ExtResource("2_asnfg")
+type = 3
+animation = "move"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_rqxx3"]
+script = ExtResource("2_asnfg")
+type = 3
+animation = "die"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_sd0cb"]
+script = ExtResource("2_asnfg")
+type = 4
+animation = "RESET"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_oortu"]
+script = ExtResource("2_asnfg")
+type = 4
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_u585q"]
+script = ExtResource("2_asnfg")
+type = 4
+animation = "move"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_1gqji"]
+script = ExtResource("2_asnfg")
+type = 4
+animation = "die"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_8q6d0"]
+script = ExtResource("2_asnfg")
+type = 5
+animation = "RESET"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_wqdv0"]
+script = ExtResource("2_asnfg")
+type = 5
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_xr2uq"]
+script = ExtResource("2_asnfg")
+type = 5
+animation = "move"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_bwql2"]
+script = ExtResource("2_asnfg")
+type = 5
+animation = "die"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_pkkq6"]
+script = ExtResource("2_asnfg")
+type = 6
+animation = "RESET"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_38f7i"]
+script = ExtResource("2_asnfg")
+type = 6
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_5q6k4"]
+script = ExtResource("2_asnfg")
+type = 6
+animation = "move"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_ij14y"]
+script = ExtResource("2_asnfg")
+type = 6
+animation = "die"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_e8pj1"]
+script = ExtResource("2_asnfg")
+type = 7
+animation = "RESET"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_14w44"]
+script = ExtResource("2_asnfg")
+type = 7
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_88ent"]
+script = ExtResource("2_asnfg")
+type = 7
+animation = "move"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_52q2l"]
+script = ExtResource("2_asnfg")
+type = 7
+animation = "die"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_0lxh1"]
+script = ExtResource("2_asnfg")
+type = 8
+animation = "RESET"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_hobia"]
+script = ExtResource("2_asnfg")
+type = 8
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_7uvxj"]
+script = ExtResource("2_asnfg")
+type = 8
+animation = "move"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_501h2"]
+script = ExtResource("2_asnfg")
+type = 8
+animation = "die"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_gc672"]
+script = ExtResource("2_asnfg")
+type = 9
+animation = "RESET"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_rfxmq"]
+script = ExtResource("2_asnfg")
+type = 9
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_febcs"]
+script = ExtResource("2_asnfg")
+type = 9
+animation = "move"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="Resource" id="Resource_qiadq"]
+script = ExtResource("2_asnfg")
+type = 9
+animation = "die"
+metadata/_custom_type_script = "uid://dwmhpxfm0uu3"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onp5p"]
+bg_color = Color(0.015686275, 0.6666667, 0.8117647, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bf48r"]
+bg_color = Color(0.014140364, 0.60096604, 0.73176473, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_auc84"]
+bg_color = Color(0.017232146, 0.7323669, 0.8917647, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjim3"]
+bg_color = Color(0.56, 0.6744827, 0.7, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piaxk"]
+bg_color = Color(0.21960784, 0.7294118, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ou0lt"]
+bg_color = Color(0.1955218, 0.6494118, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2isr"]
+bg_color = Color(0.24369383, 0.80941176, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t25fm"]
+bg_color = Color(0.60215056, 0.7, 0.56, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="Resource" id="Resource_4rn40"]
+script = ExtResource("5_onp5p")
+type = 1
+corner_radius = 12
+metadata/_custom_type_script = "uid://bpfmiym8fs6pp"
+
+[node name="UnitDashboard" type="Control" unique_id=1127961165]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1v0t8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1723701126]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.90213555, 0.70978695, 0.88153106, 1)
+
+[node name="Units" type="Node2D" parent="." unique_id=1162464799]
+position = Vector2(89.99999, 236.99998)
+scale = Vector2(0.8, 0.8)
+
+[node name="Heros" type="Node2D" parent="Units" unique_id=2079726770]
+
+[node name="Grump" type="Node2D" parent="Units/Heros" unique_id=65896258]
+
+[node name="Grump" parent="Units/Heros/Grump" unique_id=1153349947 instance=ExtResource("1_4p4n2")]
+config = SubResource("Resource_33sww")
+
+[node name="Grump_idle" parent="Units/Heros/Grump" unique_id=478281539 instance=ExtResource("1_4p4n2")]
+position = Vector2(150, 0)
+config = SubResource("Resource_1v0t8")
+
+[node name="Grump_move" parent="Units/Heros/Grump" unique_id=615539323 instance=ExtResource("1_4p4n2")]
+position = Vector2(300, 0)
+config = SubResource("Resource_onp5p")
+
+[node name="Grump_die" parent="Units/Heros/Grump" unique_id=1736775948 instance=ExtResource("1_4p4n2")]
+position = Vector2(450, 0)
+config = SubResource("Resource_4p4n2")
+
+[node name="Pirate" type="Node2D" parent="Units/Heros" unique_id=437548421]
+position = Vector2(0, 150)
+
+[node name="Pirate" parent="Units/Heros/Pirate" unique_id=1868708509 instance=ExtResource("1_4p4n2")]
+config = SubResource("Resource_asnfg")
+
+[node name="Pirate_idle" parent="Units/Heros/Pirate" unique_id=170805432 instance=ExtResource("1_4p4n2")]
+position = Vector2(150, 0)
+config = SubResource("Resource_bf48r")
+
+[node name="Pirate_move" parent="Units/Heros/Pirate" unique_id=1724948813 instance=ExtResource("1_4p4n2")]
+position = Vector2(300, 0)
+config = SubResource("Resource_auc84")
+
+[node name="Pirate_die" parent="Units/Heros/Pirate" unique_id=995283980 instance=ExtResource("1_4p4n2")]
+position = Vector2(450, 0)
+config = SubResource("Resource_qjim3")
+
+[node name="Melon" type="Node2D" parent="Units/Heros" unique_id=850956232]
+position = Vector2(0, 300)
+
+[node name="Melon" parent="Units/Heros/Melon" unique_id=1782919169 instance=ExtResource("1_4p4n2")]
+config = SubResource("Resource_piaxk")
+
+[node name="Melon_idle" parent="Units/Heros/Melon" unique_id=1931505162 instance=ExtResource("1_4p4n2")]
+position = Vector2(150, 0)
+config = SubResource("Resource_ou0lt")
+
+[node name="Melon_move" parent="Units/Heros/Melon" unique_id=1077750515 instance=ExtResource("1_4p4n2")]
+position = Vector2(300, 0)
+config = SubResource("Resource_i2isr")
+
+[node name="Melon_die" parent="Units/Heros/Melon" unique_id=1859820243 instance=ExtResource("1_4p4n2")]
+position = Vector2(450, 0)
+config = SubResource("Resource_t25fm")
+
+[node name="Bunny" type="Node2D" parent="Units/Heros" unique_id=1697718010]
+position = Vector2(0, 450)
+
+[node name="Bunny" parent="Units/Heros/Bunny" unique_id=692761175 instance=ExtResource("1_4p4n2")]
+config = SubResource("Resource_cm5uf")
+
+[node name="Bunny_idle" parent="Units/Heros/Bunny" unique_id=1372000626 instance=ExtResource("1_4p4n2")]
+position = Vector2(150, 0)
+config = SubResource("Resource_6cg25")
+
+[node name="Bunny_move" parent="Units/Heros/Bunny" unique_id=946041766 instance=ExtResource("1_4p4n2")]
+position = Vector2(300, 0)
+config = SubResource("Resource_5hdwq")
+
+[node name="Bunny_die" parent="Units/Heros/Bunny" unique_id=408911415 instance=ExtResource("1_4p4n2")]
+position = Vector2(450, 0)
+config = SubResource("Resource_rqxx3")
+
+[node name="Knight" type="Node2D" parent="Units/Heros" unique_id=1340831836]
+position = Vector2(0, 600)
+
+[node name="Knight" parent="Units/Heros/Knight" unique_id=2013552334 instance=ExtResource("1_4p4n2")]
+config = SubResource("Resource_sd0cb")
+
+[node name="Knight_idle" parent="Units/Heros/Knight" unique_id=1490411679 instance=ExtResource("1_4p4n2")]
+position = Vector2(150, 0)
+config = SubResource("Resource_oortu")
+
+[node name="Knight_move" parent="Units/Heros/Knight" unique_id=272654896 instance=ExtResource("1_4p4n2")]
+position = Vector2(300, 0)
+config = SubResource("Resource_u585q")
+
+[node name="Knight_die" parent="Units/Heros/Knight" unique_id=659764272 instance=ExtResource("1_4p4n2")]
+position = Vector2(450, 0)
+config = SubResource("Resource_1gqji")
+
+[node name="Enemies" type="Node2D" parent="Units" unique_id=1618834950]
+position = Vector2(600, 0)
+
+[node name="Soldier" type="Node2D" parent="Units/Enemies" unique_id=92898410]
+
+[node name="Soldier" parent="Units/Enemies/Soldier" unique_id=1006929353 instance=ExtResource("1_4p4n2")]
+config = SubResource("Resource_8q6d0")
+
+[node name="Soldier_idle" parent="Units/Enemies/Soldier" unique_id=710799489 instance=ExtResource("1_4p4n2")]
+position = Vector2(150, 0)
+config = SubResource("Resource_wqdv0")
+
+[node name="Soldier_move" parent="Units/Enemies/Soldier" unique_id=1703267032 instance=ExtResource("1_4p4n2")]
+position = Vector2(300, 0)
+config = SubResource("Resource_xr2uq")
+
+[node name="Soldier_die" parent="Units/Enemies/Soldier" unique_id=1067242742 instance=ExtResource("1_4p4n2")]
+position = Vector2(450, 0)
+config = SubResource("Resource_bwql2")
+
+[node name="Skull" type="Node2D" parent="Units/Enemies" unique_id=1956804030]
+position = Vector2(0, 150)
+
+[node name="Skull" parent="Units/Enemies/Skull" unique_id=1300051833 instance=ExtResource("1_4p4n2")]
+config = SubResource("Resource_pkkq6")
+
+[node name="Skull_idle" parent="Units/Enemies/Skull" unique_id=733692877 instance=ExtResource("1_4p4n2")]
+position = Vector2(150, 0)
+config = SubResource("Resource_38f7i")
+
+[node name="Skull_move" parent="Units/Enemies/Skull" unique_id=1752699091 instance=ExtResource("1_4p4n2")]
+position = Vector2(300, 0)
+config = SubResource("Resource_5q6k4")
+
+[node name="Skull_die" parent="Units/Enemies/Skull" unique_id=589075720 instance=ExtResource("1_4p4n2")]
+position = Vector2(450, 0)
+config = SubResource("Resource_ij14y")
+
+[node name="Devil" type="Node2D" parent="Units/Enemies" unique_id=2028033477]
+position = Vector2(0, 300)
+
+[node name="Devil" parent="Units/Enemies/Devil" unique_id=2127480005 instance=ExtResource("1_4p4n2")]
+config = SubResource("Resource_e8pj1")
+
+[node name="Devil_idle" parent="Units/Enemies/Devil" unique_id=1315899821 instance=ExtResource("1_4p4n2")]
+position = Vector2(150, 0)
+config = SubResource("Resource_14w44")
+
+[node name="Devil_move" parent="Units/Enemies/Devil" unique_id=611334880 instance=ExtResource("1_4p4n2")]
+position = Vector2(300, 0)
+config = SubResource("Resource_88ent")
+
+[node name="Devil_die" parent="Units/Enemies/Devil" unique_id=1740091043 instance=ExtResource("1_4p4n2")]
+position = Vector2(450, 0)
+config = SubResource("Resource_52q2l")
+
+[node name="Sniper" type="Node2D" parent="Units/Enemies" unique_id=1182833615]
+position = Vector2(0, 450)
+
+[node name="Sniper" parent="Units/Enemies/Sniper" unique_id=1927355973 instance=ExtResource("1_4p4n2")]
+config = SubResource("Resource_0lxh1")
+
+[node name="Sniper_idle" parent="Units/Enemies/Sniper" unique_id=1539143720 instance=ExtResource("1_4p4n2")]
+position = Vector2(150, 0)
+config = SubResource("Resource_hobia")
+
+[node name="Sniper_move" parent="Units/Enemies/Sniper" unique_id=1046527470 instance=ExtResource("1_4p4n2")]
+position = Vector2(300, 0)
+config = SubResource("Resource_7uvxj")
+
+[node name="Sniper_die" parent="Units/Enemies/Sniper" unique_id=1198496688 instance=ExtResource("1_4p4n2")]
+position = Vector2(450, 0)
+config = SubResource("Resource_501h2")
+
+[node name="Rage" type="Node2D" parent="Units/Enemies" unique_id=1976496402]
+position = Vector2(0, 600)
+
+[node name="Rage" parent="Units/Enemies/Rage" unique_id=1535173279 instance=ExtResource("1_4p4n2")]
+config = SubResource("Resource_gc672")
+
+[node name="Rage_idle" parent="Units/Enemies/Rage" unique_id=216118588 instance=ExtResource("1_4p4n2")]
+position = Vector2(150, 0)
+config = SubResource("Resource_rfxmq")
+
+[node name="Rage_move" parent="Units/Enemies/Rage" unique_id=1134663991 instance=ExtResource("1_4p4n2")]
+position = Vector2(300, 0)
+config = SubResource("Resource_febcs")
+
+[node name="Rage_die" parent="Units/Enemies/Rage" unique_id=1581663029 instance=ExtResource("1_4p4n2")]
+position = Vector2(450, 0)
+config = SubResource("Resource_qiadq")
+
+[node name="Buttons" type="HBoxContainer" parent="." unique_id=180342]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 61.0
+offset_right = 138.0
+offset_bottom = 101.0
+theme_override_constants/separation = 8
+
+[node name="ToggleShadow" parent="Buttons" unique_id=168831737 instance=ExtResource("3_asnfg")]
+custom_minimum_size = Vector2(160, 36)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_onp5p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bf48r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_auc84")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_qjim3")
+text = "Toggle Shadow"
+
+[node name="ToggleDirection" parent="Buttons" unique_id=608127862 instance=ExtResource("3_asnfg")]
+custom_minimum_size = Vector2(160, 36)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_piaxk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ou0lt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i2isr")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_t25fm")
+text = "Toggle Direction"
+config = SubResource("Resource_4rn40")
+
+[connection signal="pressed" from="Buttons/ToggleShadow" to="." method="_on_toggle_shadow_pressed"]
+[connection signal="pressed" from="Buttons/ToggleDirection" to="." method="_on_toggle_direction_pressed"]
