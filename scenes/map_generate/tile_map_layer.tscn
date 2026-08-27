@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cp5lqpua546if"]
+
+[ext_resource type="Texture2D" uid="uid://qndsg6yjjdx4" path="res://assets/images/brotato.png" id="1_4ays0"]
+[ext_resource type="Script" uid="uid://b31sn8ppvo6n6" path="res://scenes/map_generate/tile_map_layer.gd" id="2_ig8ca"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x2pdw"]
+texture = ExtResource("1_4ays0")
+texture_region_size = Vector2i(125, 125)
+1:4/0 = 0
+1:4/0/terrain_set = 0
+1:4/0/terrain = 0
+1:4/0/probability = 0.005
+2:4/next_alternative_id = 3
+2:4/0 = 0
+2:4/0/terrain_set = 0
+2:4/0/terrain = 1
+2:4/0/probability = 0.002
+3:4/0 = 0
+3:4/0/terrain_set = 0
+3:4/0/terrain = 2
+3:4/0/probability = 0.002
+4:4/0 = 0
+4:4/0/terrain_set = 0
+4:4/0/terrain = 2
+4:4/0/probability = 0.002
+5:4/0 = 0
+5:4/0/terrain_set = 0
+5:4/0/terrain = 2
+5:4/0/probability = 0.002
+0:4/0 = 0
+0:4/0/terrain_set = 0
+0:4/0/terrain = 0
+12:0/next_alternative_id = 2
+12:0/0 = 0
+12:0/0/terrain_set = 0
+12:0/0/terrain = 1
+12:0/1 = 1
+12:0/1/terrain_set = 0
+12:0/1/terrain = 2
+
+[sub_resource type="TileSet" id="TileSet_33sww"]
+tile_size = Vector2i(125, 125)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "BG"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+terrain_set_0/terrain_1/name = "Shadow"
+terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
+terrain_set_0/terrain_2/name = "Deco"
+terrain_set_0/terrain_2/color = Color(0.46875, 0.5, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_x2pdw")
+
+[node name="TileMapLayer" type="TileMapLayer" unique_id=389490772]
+tile_set = SubResource("TileSet_33sww")
+script = ExtResource("2_ig8ca")
