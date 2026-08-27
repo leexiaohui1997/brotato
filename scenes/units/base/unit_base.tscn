@@ -244,5 +244,7 @@ hframes = 10
 region_enabled = true
 region_rect = Rect2(0, 0, 1500, 150)
 
+[node name="Behaviors" type="Node" parent="." unique_id=1195993190]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1501428703]
 libraries/ = SubResource("AnimationLibrary_02ft7")

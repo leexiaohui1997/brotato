@@ -38,6 +38,7 @@ func generate_player() -> void:
 	player.config.type = player_unit as UnitConfig.UnitType
 	player.position = born_pos
 	entities.add_child(player)
+	player.add_behavior(PlayerBehavior.new())
 
 ## 生成相机
 func generate_camera() -> void:
