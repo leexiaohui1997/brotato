@@ -3,18 +3,20 @@ class_name MapGenerate
 
 const MAP_SHADER = preload("uid://bpkag4ftbs2jm")
 const TILE_MAP_LAYER = preload("uid://cp5lqpua546if")
-const TILE_MAP_SCALE := 0.4
+const TILE_SIZE := 50
+const TILE_MAP_SCALE := TILE_SIZE / 125.0
 
 @export var size_w := 20
 @export var size_h := 15
 @export var rng_seed := 0
 @export var shader_color: Color = "#009d00"
 
-var map_size: Vector2
+var map_size: Vector2i
 var rng: RandomNumberGenerator
 
 func generate() -> void:
 	var map_layer := Node2D.new()
+	map_layer.name = "MapLayers"
 	for i in range(3):
 		var layer := TILE_MAP_LAYER.instantiate() as MapGenerateTile
 		layer.name = ["BG", "Shadow", "Deco"][i]
@@ -27,7 +29,7 @@ func generate() -> void:
 				layer.set_cell(Vector2i(x, y), 0, atlas_coords)
 		map_layer.add_child(layer)
 		if i == 0:
-			map_size = layer.map_to_local(layer.get_used_rect().end) * TILE_MAP_SCALE
+			map_size = layer.get_used_rect().end * TILE_SIZE
 	map_layer.material = create_material()
 	map_layer.scale = Vector2.ONE * TILE_MAP_SCALE
 	add_child(map_layer)
