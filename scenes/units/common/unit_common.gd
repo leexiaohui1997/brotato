@@ -7,6 +7,9 @@ const UNIT_BASE = preload("uid://c1l18o0sk0hw1")
 @export var config: UnitConfig
 
 @onready var behaviors: Node = $Behaviors
+@onready var dash_timer: Timer = %DashTimer
+@onready var dash_cooldown_timer: Timer = %DashCooldownTimer
+
 var unit_node: UnitBase
 
 var direction: Vector2:
@@ -14,9 +17,17 @@ var direction: Vector2:
 		direction = value
 		update_unit_flip()
 
+var can_dash: bool:
+	get: return false if not dash_cooldown_timer else dash_cooldown_timer.is_stopped()
+var is_dashing: bool:
+	get: return false if not dash_timer else !dash_timer.is_stopped()
+
 var speed: float:
 	get:
-		return stats.speed
+		var s := stats.speed
+		if is_dashing:
+			s *= stats.dash_speed_multi
+		return s
 
 func update_unit_flip() -> void:
 	if not unit_node: return
@@ -51,9 +62,20 @@ func update_animation() -> void:
 	if anim_name != anim_player.current_animation:
 		anim_player.play(anim_name)
 
+func dash() -> void:
+	if not can_dash: return
+	if is_dashing: return
+	if direction == Vector2.ZERO: return
+	dash_timer.start()
+
 func _ready() -> void:
 	create_unit()
+	dash_timer.wait_time = stats.dash_duration
+	dash_cooldown_timer.wait_time = stats.dash_cooldown
 
 func _physics_process(delta: float) -> void:
 	update_animation()
 	update_position(delta)
+
+func _on_dash_timer_timeout() -> void:
+	dash_cooldown_timer.start()
