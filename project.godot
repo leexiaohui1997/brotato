@@ -26,6 +26,10 @@ window/size/always_on_top=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[gui]
+
+theme/custom_font="uid://bqg5aw3dsg3nl"
+
 [input]
 
 up={

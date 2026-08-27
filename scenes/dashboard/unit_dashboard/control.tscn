@@ -554,7 +554,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_onp5p")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bf48r")
 theme_override_styles/hover = SubResource("StyleBoxFlat_auc84")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_qjim3")
-text = "Toggle Shadow"
+text = "切换阴影"
 
 [node name="ToggleDirection" parent="Buttons" unique_id=608127862 instance=ExtResource("3_asnfg")]
 custom_minimum_size = Vector2(160, 36)
@@ -563,7 +563,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_piaxk")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ou0lt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_i2isr")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_t25fm")
-text = "Toggle Direction"
+text = "切换朝向"
 config = SubResource("Resource_4rn40")
 
 [connection signal="pressed" from="Buttons/ToggleShadow" to="." method="_on_toggle_shadow_pressed"]
