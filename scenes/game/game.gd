@@ -60,6 +60,12 @@ func spawn_enemy() -> void:
 	enemy.config.type = UnitConfig.EnemyUnit.values().pick_random()
 	enemy.position = get_born_pos(false)
 	entities.add_child(enemy)
+	enemy.add_behavior(EnemyBehavior.new())
+
+## 批量生成敌人
+func spawn_enemies(count: int) -> void:
+	for i in range(count):
+		spawn_enemy()
 
 ## 获取初始位置
 func get_born_pos(is_player: bool) -> Vector2i:
@@ -86,4 +92,4 @@ func _exit_tree() -> void:
 	Global.game = null
 
 func _on_spawn_enemy_timer_timeout() -> void:
-	spawn_enemy()
+	spawn_enemies(3)

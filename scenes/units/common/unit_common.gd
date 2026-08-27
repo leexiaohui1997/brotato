@@ -12,10 +12,7 @@ const UNIT_BASE = preload("uid://c1l18o0sk0hw1")
 
 var unit_node: UnitBase
 
-var direction: Vector2:
-	set(value):
-		direction = value
-		update_unit_flip()
+var direction: Vector2
 
 var can_dash: bool:
 	get: return false if not dash_cooldown_timer else dash_cooldown_timer.is_stopped()
@@ -29,18 +26,12 @@ var speed: float:
 			s *= stats.dash_speed_multi
 		return s
 
-func update_unit_flip() -> void:
-	if not unit_node: return
-	if direction.x != 0:
-		unit_node.sprite.flip_h = direction.x > 0
-
 func create_unit() -> void:
 	if unit_node: return
 	unit_node = UNIT_BASE.instantiate()
 	unit_node.config = config
 	unit_node.name = "UnitBase"
 	add_child(unit_node)
-	update_unit_flip()
 
 func add_behavior(node: Behavior) -> void:
 	node.belong = self

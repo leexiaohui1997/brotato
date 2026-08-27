@@ -2,7 +2,7 @@
 extends Node2D
 class_name UnitBase
 
-const UNIT_RADIUS := 50
+const UNIT_RADIUS := 40
 
 @onready var shadow: Sprite2D = %Shadow
 @onready var sprite: Sprite2D = %Sprite2D

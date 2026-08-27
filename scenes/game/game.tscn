@@ -14,6 +14,7 @@ y_sort_enabled = true
 
 [node name="SpawnEnemyTimer" type="Timer" parent="Timers" unique_id=1566036557]
 wait_time = 3.0
+one_shot = true
 autostart = true
 
 [connection signal="timeout" from="Timers/SpawnEnemyTimer" to="." method="_on_spawn_enemy_timer_timeout"]
