@@ -29,7 +29,7 @@ func generate_map() -> void:
 
 ## 生成玩家
 func generate_player() -> void:
-	var born_pos := map_config.player_born_pos if map_config else get_born_pos()
+	var born_pos := map_config.player_born_pos if map_config else get_born_pos(true)
 	player = UNIT_BASE.instantiate()
 	player.name = "Player"
 	player.config = UnitConfig.new()
@@ -58,14 +58,21 @@ func spawn_enemy() -> void:
 	enemy_uid += 1
 	enemy.config = UnitConfig.new()
 	enemy.config.type = UnitConfig.EnemyUnit.values().pick_random()
-	enemy.position = get_born_pos()
+	enemy.position = get_born_pos(false)
 	entities.add_child(enemy)
 
 ## 获取初始位置
-func get_born_pos() -> Vector2i:
+func get_born_pos(is_player: bool) -> Vector2i:
 	var units: Array[UnitBase] = []
 	units.assign(entities.find_children("*", "UnitBase", false, false))
-	return CoordUtils.get_random_pos(map_node.map_start_pos, map_node.map_end_pos, units)
+	for i in range(100):
+		var vec := CoordUtils.get_random_pos(map_node.map_start_pos, map_node.map_end_pos, units)
+		if is_player:
+			return vec
+		if abs(vec.distance_to(player.global_position)) <= UnitBase.UNIT_RADIUS * 5:
+			continue
+		return vec
+	return map_node.map_start_pos
 
 func _ready() -> void:
 	generate_map()
