@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cupf41ydqkiqd"]
+
+[ext_resource type="Script" uid="uid://cpwa47o4vxibr" path="res://scenes/units/common/unit_common.gd" id="1_86lwb"]
+
+[node name="UnitCommon" type="Node2D" unique_id=103573091]
+script = ExtResource("1_86lwb")
+
+[node name="Behaviors" type="Node" parent="." unique_id=526551749]

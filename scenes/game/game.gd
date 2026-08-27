@@ -2,7 +2,7 @@ extends Node2D
 class_name GameNode
 
 const MAP_GENERATE = preload("uid://b2c6lrpx36ia1")
-const UNIT_BASE = preload("uid://c1l18o0sk0hw1")
+const UNIT_COMMON = preload("uid://cupf41ydqkiqd")
 
 const CAMERA_ZOOM = 1.5
 
@@ -12,7 +12,7 @@ const CAMERA_ZOOM = 1.5
 @onready var entities: Node2D = $Entities
 
 var map_node: MapGenerate
-var player: UnitBase
+var player: UnitCommon
 var camera: Camera2D
 var enemy_uid := 1
 
@@ -30,7 +30,7 @@ func generate_map() -> void:
 ## 生成玩家
 func generate_player() -> void:
 	var born_pos := map_config.player_born_pos if map_config else get_born_pos(true)
-	player = UNIT_BASE.instantiate()
+	player = UNIT_COMMON.instantiate()
 	player.name = "Player"
 	player.config = UnitConfig.new()
 	player.config.type = player_unit as UnitConfig.UnitType
@@ -53,7 +53,7 @@ func generate_camera() -> void:
 
 ## 生成敌人
 func spawn_enemy() -> void:
-	var enemy := UNIT_BASE.instantiate() as UnitBase
+	var enemy := UNIT_COMMON.instantiate() as UnitCommon
 	enemy.name = "Enemy_%d" % [enemy_uid]
 	enemy_uid += 1
 	enemy.config = UnitConfig.new()
@@ -63,8 +63,8 @@ func spawn_enemy() -> void:
 
 ## 获取初始位置
 func get_born_pos(is_player: bool) -> Vector2i:
-	var units: Array[UnitBase] = []
-	units.assign(entities.find_children("*", "UnitBase", false, false))
+	var units: Array[UnitCommon] = []
+	units.assign(entities.find_children("*", "UnitCommon", false, false))
 	for i in range(100):
 		var vec := CoordUtils.get_random_pos(map_node.map_start_pos, map_node.map_end_pos, units)
 		if is_player:
