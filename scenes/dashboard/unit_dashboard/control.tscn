@@ -321,90 +321,110 @@ scale = Vector2(0.8, 0.8)
 [node name="Grump" type="Node2D" parent="Units/Heros" unique_id=65896258]
 
 [node name="Grump" parent="Units/Heros/Grump" unique_id=1153349947 instance=ExtResource("1_4p4n2")]
+paused = true
 config = SubResource("Resource_33sww")
 
 [node name="Grump_idle" parent="Units/Heros/Grump" unique_id=478281539 instance=ExtResource("1_4p4n2")]
 position = Vector2(150, 0)
+paused = true
 config = SubResource("Resource_1v0t8")
 
 [node name="Grump_move" parent="Units/Heros/Grump" unique_id=615539323 instance=ExtResource("1_4p4n2")]
 position = Vector2(300, 0)
+paused = true
 config = SubResource("Resource_onp5p")
 
 [node name="Grump_die" parent="Units/Heros/Grump" unique_id=1736775948 instance=ExtResource("1_4p4n2")]
 position = Vector2(450, 0)
+paused = true
 config = SubResource("Resource_4p4n2")
 
 [node name="Pirate" type="Node2D" parent="Units/Heros" unique_id=437548421]
 position = Vector2(0, 150)
 
 [node name="Pirate" parent="Units/Heros/Pirate" unique_id=1868708509 instance=ExtResource("1_4p4n2")]
+paused = true
 config = SubResource("Resource_asnfg")
 
 [node name="Pirate_idle" parent="Units/Heros/Pirate" unique_id=170805432 instance=ExtResource("1_4p4n2")]
 position = Vector2(150, 0)
+paused = true
 config = SubResource("Resource_bf48r")
 
 [node name="Pirate_move" parent="Units/Heros/Pirate" unique_id=1724948813 instance=ExtResource("1_4p4n2")]
 position = Vector2(300, 0)
+paused = true
 config = SubResource("Resource_auc84")
 
 [node name="Pirate_die" parent="Units/Heros/Pirate" unique_id=995283980 instance=ExtResource("1_4p4n2")]
 position = Vector2(450, 0)
+paused = true
 config = SubResource("Resource_qjim3")
 
 [node name="Melon" type="Node2D" parent="Units/Heros" unique_id=850956232]
 position = Vector2(0, 300)
 
 [node name="Melon" parent="Units/Heros/Melon" unique_id=1782919169 instance=ExtResource("1_4p4n2")]
+paused = true
 config = SubResource("Resource_piaxk")
 
 [node name="Melon_idle" parent="Units/Heros/Melon" unique_id=1931505162 instance=ExtResource("1_4p4n2")]
 position = Vector2(150, 0)
+paused = true
 config = SubResource("Resource_ou0lt")
 
 [node name="Melon_move" parent="Units/Heros/Melon" unique_id=1077750515 instance=ExtResource("1_4p4n2")]
 position = Vector2(300, 0)
+paused = true
 config = SubResource("Resource_i2isr")
 
 [node name="Melon_die" parent="Units/Heros/Melon" unique_id=1859820243 instance=ExtResource("1_4p4n2")]
 position = Vector2(450, 0)
+paused = true
 config = SubResource("Resource_t25fm")
 
 [node name="Bunny" type="Node2D" parent="Units/Heros" unique_id=1697718010]
 position = Vector2(0, 450)
 
 [node name="Bunny" parent="Units/Heros/Bunny" unique_id=692761175 instance=ExtResource("1_4p4n2")]
+paused = true
 config = SubResource("Resource_cm5uf")
 
 [node name="Bunny_idle" parent="Units/Heros/Bunny" unique_id=1372000626 instance=ExtResource("1_4p4n2")]
 position = Vector2(150, 0)
+paused = true
 config = SubResource("Resource_6cg25")
 
 [node name="Bunny_move" parent="Units/Heros/Bunny" unique_id=946041766 instance=ExtResource("1_4p4n2")]
 position = Vector2(300, 0)
+paused = true
 config = SubResource("Resource_5hdwq")
 
 [node name="Bunny_die" parent="Units/Heros/Bunny" unique_id=408911415 instance=ExtResource("1_4p4n2")]
 position = Vector2(450, 0)
+paused = true
 config = SubResource("Resource_rqxx3")
 
 [node name="Knight" type="Node2D" parent="Units/Heros" unique_id=1340831836]
 position = Vector2(0, 600)
 
 [node name="Knight" parent="Units/Heros/Knight" unique_id=2013552334 instance=ExtResource("1_4p4n2")]
+paused = true
 config = SubResource("Resource_sd0cb")
 
 [node name="Knight_idle" parent="Units/Heros/Knight" unique_id=1490411679 instance=ExtResource("1_4p4n2")]
 position = Vector2(150, 0)
+paused = true
 config = SubResource("Resource_oortu")
 
 [node name="Knight_move" parent="Units/Heros/Knight" unique_id=272654896 instance=ExtResource("1_4p4n2")]
 position = Vector2(300, 0)
+paused = true
 config = SubResource("Resource_u585q")
 
 [node name="Knight_die" parent="Units/Heros/Knight" unique_id=659764272 instance=ExtResource("1_4p4n2")]
 position = Vector2(450, 0)
+paused = true
 config = SubResource("Resource_1gqji")
 
 [node name="Enemies" type="Node2D" parent="Units" unique_id=1618834950]
@@ -413,90 +433,110 @@ position = Vector2(600, 0)
 [node name="Soldier" type="Node2D" parent="Units/Enemies" unique_id=92898410]
 
 [node name="Soldier" parent="Units/Enemies/Soldier" unique_id=1006929353 instance=ExtResource("1_4p4n2")]
+paused = true
 config = SubResource("Resource_8q6d0")
 
 [node name="Soldier_idle" parent="Units/Enemies/Soldier" unique_id=710799489 instance=ExtResource("1_4p4n2")]
 position = Vector2(150, 0)
+paused = true
 config = SubResource("Resource_wqdv0")
 
 [node name="Soldier_move" parent="Units/Enemies/Soldier" unique_id=1703267032 instance=ExtResource("1_4p4n2")]
 position = Vector2(300, 0)
+paused = true
 config = SubResource("Resource_xr2uq")
 
 [node name="Soldier_die" parent="Units/Enemies/Soldier" unique_id=1067242742 instance=ExtResource("1_4p4n2")]
 position = Vector2(450, 0)
+paused = true
 config = SubResource("Resource_bwql2")
 
 [node name="Skull" type="Node2D" parent="Units/Enemies" unique_id=1956804030]
 position = Vector2(0, 150)
 
 [node name="Skull" parent="Units/Enemies/Skull" unique_id=1300051833 instance=ExtResource("1_4p4n2")]
+paused = true
 config = SubResource("Resource_pkkq6")
 
 [node name="Skull_idle" parent="Units/Enemies/Skull" unique_id=733692877 instance=ExtResource("1_4p4n2")]
 position = Vector2(150, 0)
+paused = true
 config = SubResource("Resource_38f7i")
 
 [node name="Skull_move" parent="Units/Enemies/Skull" unique_id=1752699091 instance=ExtResource("1_4p4n2")]
 position = Vector2(300, 0)
+paused = true
 config = SubResource("Resource_5q6k4")
 
 [node name="Skull_die" parent="Units/Enemies/Skull" unique_id=589075720 instance=ExtResource("1_4p4n2")]
 position = Vector2(450, 0)
+paused = true
 config = SubResource("Resource_ij14y")
 
 [node name="Devil" type="Node2D" parent="Units/Enemies" unique_id=2028033477]
 position = Vector2(0, 300)
 
 [node name="Devil" parent="Units/Enemies/Devil" unique_id=2127480005 instance=ExtResource("1_4p4n2")]
+paused = true
 config = SubResource("Resource_e8pj1")
 
 [node name="Devil_idle" parent="Units/Enemies/Devil" unique_id=1315899821 instance=ExtResource("1_4p4n2")]
 position = Vector2(150, 0)
+paused = true
 config = SubResource("Resource_14w44")
 
 [node name="Devil_move" parent="Units/Enemies/Devil" unique_id=611334880 instance=ExtResource("1_4p4n2")]
 position = Vector2(300, 0)
+paused = true
 config = SubResource("Resource_88ent")
 
 [node name="Devil_die" parent="Units/Enemies/Devil" unique_id=1740091043 instance=ExtResource("1_4p4n2")]
 position = Vector2(450, 0)
+paused = true
 config = SubResource("Resource_52q2l")
 
 [node name="Sniper" type="Node2D" parent="Units/Enemies" unique_id=1182833615]
 position = Vector2(0, 450)
 
 [node name="Sniper" parent="Units/Enemies/Sniper" unique_id=1927355973 instance=ExtResource("1_4p4n2")]
+paused = true
 config = SubResource("Resource_0lxh1")
 
 [node name="Sniper_idle" parent="Units/Enemies/Sniper" unique_id=1539143720 instance=ExtResource("1_4p4n2")]
 position = Vector2(150, 0)
+paused = true
 config = SubResource("Resource_hobia")
 
 [node name="Sniper_move" parent="Units/Enemies/Sniper" unique_id=1046527470 instance=ExtResource("1_4p4n2")]
 position = Vector2(300, 0)
+paused = true
 config = SubResource("Resource_7uvxj")
 
 [node name="Sniper_die" parent="Units/Enemies/Sniper" unique_id=1198496688 instance=ExtResource("1_4p4n2")]
 position = Vector2(450, 0)
+paused = true
 config = SubResource("Resource_501h2")
 
 [node name="Rage" type="Node2D" parent="Units/Enemies" unique_id=1976496402]
 position = Vector2(0, 600)
 
 [node name="Rage" parent="Units/Enemies/Rage" unique_id=1535173279 instance=ExtResource("1_4p4n2")]
+paused = true
 config = SubResource("Resource_gc672")
 
 [node name="Rage_idle" parent="Units/Enemies/Rage" unique_id=216118588 instance=ExtResource("1_4p4n2")]
 position = Vector2(150, 0)
+paused = true
 config = SubResource("Resource_rfxmq")
 
 [node name="Rage_move" parent="Units/Enemies/Rage" unique_id=1134663991 instance=ExtResource("1_4p4n2")]
 position = Vector2(300, 0)
+paused = true
 config = SubResource("Resource_febcs")
 
 [node name="Rage_die" parent="Units/Enemies/Rage" unique_id=1581663029 instance=ExtResource("1_4p4n2")]
 position = Vector2(450, 0)
+paused = true
 config = SubResource("Resource_qiadq")
 
 [node name="Buttons" type="HBoxContainer" parent="." unique_id=180342]
