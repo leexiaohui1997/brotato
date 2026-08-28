@@ -18,6 +18,7 @@ wait_time = 3.0
 one_shot = true
 autostart = true
 
-[node name="AttackService" parent="." unique_id=102567857 instance=ExtResource("2_7h61r")]
+[node name="AttackService" parent="." unique_id=102567857 node_paths=PackedStringArray("game") instance=ExtResource("2_7h61r")]
+game = NodePath("..")
 
 [connection signal="timeout" from="Timers/SpawnEnemyTimer" to="." method="_on_spawn_enemy_timer_timeout"]

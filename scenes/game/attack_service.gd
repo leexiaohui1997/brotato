@@ -1,8 +1,13 @@
 extends Node
 class_name AttackService
 
+@export var game: GameNode
+
 ## 触发攻击
 func attack(target: UnitCommon, source: Node2D) -> void:
+	## 玩家冲刺状态下免伤
+	if target == game.player and target.is_dashing: return
+
 	var damage := 0.0
 	if source is UnitCommon:
 		damage = calculate_unit_damage(source)

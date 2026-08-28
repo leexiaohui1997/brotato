@@ -39,6 +39,8 @@ func generate_player() -> void:
 	entities.add_child(player)
 	player.add_behavior(PlayerBehavior.new())
 	player.add_behavior(TrailBehavior.new())
+	player.add_behavior(FlashBehavior.new())
+	player.tree_exited.connect(func(): player = null)
 
 ## 生成相机
 func generate_camera() -> void:

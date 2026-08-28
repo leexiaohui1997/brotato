@@ -33,7 +33,8 @@ var speed: float:
 		return s
 
 ## 攻击力
-var attack_power: int = 1
+var attack_power: int:
+	get: return 1
 
 ## 当前生命
 var health: int = 10:
