@@ -2,6 +2,8 @@ extends Node2D
 class_name UnitCommon
 
 signal on_dash_start
+signal on_health_changed
+signal on_max_health_changed
 
 const UNIT_BASE = preload("uid://c1l18o0sk0hw1")
 
@@ -27,6 +29,18 @@ var speed: float:
 		if is_dashing:
 			s *= stats.dash_speed_multi
 		return s
+
+## 当前生命
+var health: int = 10:
+	set(value):
+		health = value
+		on_health_changed.emit()
+
+## 生命上限
+var max_health: int = 10:
+	set(value):
+		max_health = value
+		on_max_health_changed.emit()
 
 func create_unit() -> void:
 	if unit_node: return

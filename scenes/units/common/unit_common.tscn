@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cupf41ydqkiqd"]
 
 [ext_resource type="Script" uid="uid://cpwa47o4vxibr" path="res://scenes/units/common/unit_common.gd" id="1_86lwb"]
+[ext_resource type="PackedScene" uid="uid://ifmw1e7gycc8" path="res://scenes/ui/health_bar/health_bar.tscn" id="2_givmi"]
 
 [node name="UnitCommon" type="Node2D" unique_id=103573091]
 script = ExtResource("1_86lwb")
@@ -16,5 +17,17 @@ one_shot = true
 [node name="DashCooldownTimer" type="Timer" parent="Timers" unique_id=879975585]
 unique_name_in_owner = true
 one_shot = true
+
+[node name="HealthBar" parent="." unique_id=1831408364 node_paths=PackedStringArray("reference") instance=ExtResource("2_givmi")]
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_top = -64.0
+offset_right = 40.0
+offset_bottom = -48.0
+grow_horizontal = 2
+reference = NodePath("..")
 
 [connection signal="timeout" from="Timers/DashTimer" to="." method="_on_dash_timer_timeout"]

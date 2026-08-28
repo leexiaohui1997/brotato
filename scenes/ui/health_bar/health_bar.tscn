@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ifmw1e7gycc8"]
+
+[ext_resource type="Script" uid="uid://co3fdvhrapaw3" path="res://scenes/ui/health_bar/health_bar.gd" id="1_07cyp"]
+[ext_resource type="StyleBox" uid="uid://p2c06sbtmykg" path="res://scenes/ui/health_bar/styles/enemy_bg.tres" id="2_07cyp"]
+[ext_resource type="StyleBox" uid="uid://dekslv4fjbhjb" path="res://scenes/ui/health_bar/styles/enemy_fill.tres" id="3_v8cic"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bslxb"]
+font_size = 14
+
+[node name="HealthBar" type="Control" unique_id=1831408364]
+custom_minimum_size = Vector2(72, 16)
+custom_maximum_size = Vector2(80, 16)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 72.0
+offset_bottom = 16.0
+script = ExtResource("1_07cyp")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=432122710]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = ExtResource("2_07cyp")
+theme_override_styles/fill = ExtResource("3_v8cic")
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
+[node name="Label" type="Label" parent="." unique_id=550996647]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_bslxb")
+horizontal_alignment = 1
+vertical_alignment = 1
