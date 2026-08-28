@@ -1,6 +1,8 @@
 extends Node2D
 class_name UnitCommon
 
+signal on_dash_start
+
 const UNIT_BASE = preload("uid://c1l18o0sk0hw1")
 
 @export var stats: UnitStats = UnitStats.new()
@@ -58,6 +60,7 @@ func dash() -> void:
 	if is_dashing: return
 	if direction == Vector2.ZERO: return
 	dash_timer.start()
+	on_dash_start.emit()
 
 func _ready() -> void:
 	create_unit()

@@ -37,6 +37,7 @@ func generate_player() -> void:
 	player.position = born_pos
 	entities.add_child(player)
 	player.add_behavior(PlayerBehavior.new())
+	player.add_behavior(TrailBehavior.new())
 
 ## 生成相机
 func generate_camera() -> void:
