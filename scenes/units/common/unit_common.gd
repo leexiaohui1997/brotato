@@ -4,6 +4,8 @@ class_name UnitCommon
 signal on_dash_start
 signal on_health_changed
 signal on_max_health_changed
+signal on_damaged(lose: int)
+signal on_died
 
 const UNIT_BASE = preload("uid://c1l18o0sk0hw1")
 
@@ -30,17 +32,42 @@ var speed: float:
 			s *= stats.dash_speed_multi
 		return s
 
+## 攻击力
+var attack_power: int = 1
+
 ## 当前生命
 var health: int = 10:
 	set(value):
 		health = value
 		on_health_changed.emit()
+		if health <= 0: die()
 
 ## 生命上限
 var max_health: int = 10:
 	set(value):
 		max_health = value
 		on_max_health_changed.emit()
+
+## 是否已死亡
+var is_died: bool:
+	get: return health <= 0
+
+## 扣血
+func lose_health(amount: int) -> void:
+	if amount == 0: return
+	if health <= 0: return
+	var old_health := health
+	var new_health := clampi(health - amount, 0, max_health)
+	var lose := old_health - new_health
+	health = new_health
+	on_damaged.emit(lose)
+
+## 死亡逻辑
+func die() -> void:
+	unit_node.anim_player.play("die")
+	await unit_node.anim_player.animation_finished
+	on_died.emit()
+	queue_free()
 
 func create_unit() -> void:
 	if unit_node: return
@@ -82,6 +109,7 @@ func _ready() -> void:
 	dash_cooldown_timer.wait_time = stats.dash_cooldown
 
 func _physics_process(delta: float) -> void:
+	if is_died: return
 	update_animation()
 	update_position(delta)
 

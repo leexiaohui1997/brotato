@@ -14,4 +14,4 @@ static var DASH_COOLDOWN: float:
 	get: return 2.0
 ## 敌人攻击冷却时间
 static var ENEMY_ATTACK_COOLDOWN: float:
-	get: return 5.0
+	get: return 2.0

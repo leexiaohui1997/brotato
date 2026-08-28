@@ -52,6 +52,10 @@ func generate_camera() -> void:
 	camera.limit_right = map_node.map_size.x
 	camera.limit_bottom = map_node.map_size.y
 	player.add_child(camera)
+	player.on_died.connect(func(): 
+		camera.position_smoothing_enabled = false
+		camera.reparent(self)
+	, CONNECT_ONE_SHOT)
 
 ## 生成敌人
 func spawn_enemy() -> void:
