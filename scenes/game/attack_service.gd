@@ -7,20 +7,15 @@ class_name AttackService
 func attack(target: UnitCommon, source: Node2D) -> void:
 	if not source is UnitCommon: return
 	var ctx := AttackContext.create(game, target, source)
-	if is_immunity(ctx): return
-	var final_damage := calculate_damage(ctx)
-	if final_damage <= 0: return
-	target.lose_health(final_damage)
-	game.create_floating_text(target, "-%d" % [final_damage], ColorUtils.ColorType.DAMAGE)
+	## 防止攻击
+	if ctx.is_prevent: return
+	
+	## 触发格挡
+	if ctx.is_blocked:
+		game.create_floating_text(target, "格挡", ColorUtils.ColorType.BLOCKED)
+		return
 
-## 判定是否免伤
-func is_immunity(ctx: AttackContext) -> bool:
-	## 玩家处于冲刺状态时，免疫伤害
-	if ctx.target_is_player and ctx.target.is_dashing:
-		return true
-	return false
-
-## 计算伤害
-func calculate_damage(ctx: AttackContext) -> int:
-	var damage := 0.0 + ctx.source.attack_power
-	return floori(damage)
+	## 最终伤害
+	if ctx.damage <= 0: return
+	target.lose_health(ctx.damage)
+	game.create_floating_text(target, "-%d" % [ctx.damage], ColorUtils.ColorType.DAMAGE)
