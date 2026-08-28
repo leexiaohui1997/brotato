@@ -10,6 +10,7 @@ const CAMERA_ZOOM = 1.5
 @export var player_unit: UnitConfig.HeroUnit
 
 @onready var entities: Node2D = $Entities
+@onready var attack_service: AttackService = $AttackService
 
 var map_node: MapGenerate
 var player: UnitCommon

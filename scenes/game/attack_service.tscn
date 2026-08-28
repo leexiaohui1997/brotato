@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://djlbghvpaqoyw"]
+
+[ext_resource type="Script" uid="uid://pn7kwd2vriml" path="res://scenes/game/attack_service.gd" id="1_0jbs2"]
+
+[node name="AttackService" type="Node" unique_id=102567857]
+script = ExtResource("1_0jbs2")

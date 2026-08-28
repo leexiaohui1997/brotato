@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://br2y8ly0bydg6"]
 
 [ext_resource type="Script" uid="uid://btlo0pfq5wfuc" path="res://scenes/game/game.gd" id="1_sul5r"]
+[ext_resource type="PackedScene" uid="uid://djlbghvpaqoyw" path="res://scenes/game/attack_service.tscn" id="2_7h61r"]
 
 [node name="Game" type="Node2D" unique_id=45223946]
 script = ExtResource("1_sul5r")
@@ -16,5 +17,7 @@ y_sort_enabled = true
 wait_time = 3.0
 one_shot = true
 autostart = true
+
+[node name="AttackService" parent="." unique_id=102567857 instance=ExtResource("2_7h61r")]
 
 [connection signal="timeout" from="Timers/SpawnEnemyTimer" to="." method="_on_spawn_enemy_timer_timeout"]
