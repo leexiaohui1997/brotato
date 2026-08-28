@@ -11,6 +11,9 @@ player_unit = 4
 z_index = 1
 y_sort_enabled = true
 
+[node name="FloatingTexts" type="Node2D" parent="." unique_id=503991085]
+z_index = 2
+
 [node name="Timers" type="Node" parent="." unique_id=690701227]
 
 [node name="SpawnEnemyTimer" type="Timer" parent="Timers" unique_id=1566036557]

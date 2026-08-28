@@ -14,6 +14,7 @@ func attack(target: UnitCommon, source: Node2D) -> void:
 	var final_damage := floori(damage)
 	if final_damage > 0:
 		target.lose_health(final_damage)
+		game.create_floating_text(target, "-%d" % [final_damage], ColorUtils.ColorType.DAMAGE)
 
 ## 计算单位伤害
 func calculate_unit_damage(source: UnitCommon) -> float:

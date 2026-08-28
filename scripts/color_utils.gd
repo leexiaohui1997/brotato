@@ -33,7 +33,15 @@ enum ColorType {
 	## 史诗
 	EPIC,
 	## 传说
-	LEGEND
+	LEGEND,
+	## 伤害
+	DAMAGE,
+	## 格挡
+	BLOCKED,
+	## 暴击
+	CRITICAL,
+	## 回复
+	STEAL
 }
 
 # 色值预设
@@ -42,7 +50,11 @@ const COLOR_PRESETS: Dictionary[ColorType, Color] = {
 	ColorType.COMMON: "#38ba00",
 	ColorType.RARE: "#8902c2",
 	ColorType.EPIC: "#c1a103",
-	ColorType.LEGEND: "#c13303"
+	ColorType.LEGEND: "#c13303",
+	ColorType.DAMAGE: "#ffffff",
+	ColorType.BLOCKED: "#ff4a74",
+	ColorType.CRITICAL: "#fec761",
+	ColorType.STEAL: "#00a07b"
 }
 
 ## 根据默认色生成所有状态色值

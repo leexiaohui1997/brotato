@@ -3,6 +3,7 @@ class_name GameNode
 
 const MAP_GENERATE = preload("uid://b2c6lrpx36ia1")
 const UNIT_COMMON = preload("uid://cupf41ydqkiqd")
+const FLOATING_TEXT = preload("uid://qkwyrg22h3gi")
 
 const CAMERA_ZOOM = 1.5
 
@@ -11,6 +12,7 @@ const CAMERA_ZOOM = 1.5
 
 @onready var entities: Node2D = $Entities
 @onready var attack_service: AttackService = $AttackService
+@onready var floating_texts: Node2D = $FloatingTexts
 
 var map_node: MapGenerate
 var player: UnitCommon
@@ -87,6 +89,15 @@ func get_born_pos(is_player: bool) -> Vector2i:
 			continue
 		return vec
 	return map_node.map_start_pos
+
+## 创建浮动文字
+func create_floating_text(target: Node2D, text: String, color: ColorUtils.ColorType) -> void:
+	var instance := FLOATING_TEXT.instantiate() as FloatingText
+	floating_texts.add_child(instance)
+	var random_pos := randf_range(0, TAU) * 35
+	var spawn_pos := target.global_position + Vector2.RIGHT.rotated(random_pos)
+	instance.global_position = spawn_pos
+	instance.setup(text, ColorUtils.COLOR_PRESETS[color])
 
 func _ready() -> void:
 	generate_map()
