@@ -15,3 +15,6 @@ static var DASH_COOLDOWN: float:
 ## 敌人攻击冷却时间
 static var ENEMY_ATTACK_COOLDOWN: float:
 	get: return 2.0
+## 武器数量上限
+static var WEAPON_LIMIT: int:
+	get: return 6

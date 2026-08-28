@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dgo6wppwqxv7w"]
+
+[ext_resource type="Script" uid="uid://c5dijqgq0tphm" path="res://scenes/weapon/weapon.gd" id="1_l3xq3"]
+[ext_resource type="Texture2D" uid="uid://qndsg6yjjdx4" path="res://assets/images/brotato.png" id="2_jej8l"]
+
+[node name="Weapon" type="Node2D" unique_id=353863027]
+script = ExtResource("1_l3xq3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1121695163]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_jej8l")
+hframes = 11
+region_enabled = true
+region_rect = Rect2(0, 425, 1650, 75)
+
+[node name="Behaviors" type="Node" parent="." unique_id=167704279]

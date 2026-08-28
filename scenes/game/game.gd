@@ -39,6 +39,7 @@ func generate_player() -> void:
 	player.config.type = player_unit as UnitConfig.UnitType
 	player.position = born_pos
 	entities.add_child(player)
+	player.add_behavior(UnitWeaponBehavior.new())
 	player.add_behavior(PlayerBehavior.new())
 	player.add_behavior(TrailBehavior.new())
 	player.add_behavior(FlashBehavior.new())

@@ -18,6 +18,10 @@ one_shot = true
 unique_name_in_owner = true
 one_shot = true
 
+[node name="Weapons" type="Node2D" parent="." unique_id=1766221538]
+z_index = 1
+position = Vector2(0, -20)
+
 [node name="HealthBar" parent="." unique_id=1831408364 node_paths=PackedStringArray("reference") instance=ExtResource("2_givmi")]
 z_index = 1
 anchors_preset = -1

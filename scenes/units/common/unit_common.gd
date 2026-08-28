@@ -15,6 +15,7 @@ const UNIT_BASE = preload("uid://c1l18o0sk0hw1")
 @onready var behaviors: Node = $Behaviors
 @onready var dash_timer: Timer = %DashTimer
 @onready var dash_cooldown_timer: Timer = %DashCooldownTimer
+@onready var weapons: Node2D = $Weapons
 
 var unit_node: UnitBase
 
@@ -52,6 +53,10 @@ var max_health: int = 10:
 ## 是否已死亡
 var is_died: bool:
 	get: return health <= 0
+
+## 是否朝向右侧
+var is_facing_right: bool:
+	get: return unit_node and unit_node.sprite and unit_node.sprite.flip_h
 
 ## 扣血
 func lose_health(amount: int) -> void:
