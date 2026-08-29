@@ -1,15 +1,29 @@
 extends Node2D
 class_name Weapon
 
-@export var belong: UnitCommon
-@export var weapon_id: WeaponConfig.WeaponId
+const WEAPON = preload("uid://dgo6wppwqxv7w")
+
+static func create() -> Weapon:
+	var weapon := WEAPON.instantiate() as Weapon
+	return weapon
+
+var belong: UnitCommon
+var weapon_id: WeaponConfig.WeaponId
+var stats: WeaponStats
+
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var behaviors: Node = $Behaviors
+
+## 是否是近战武器
+var is_melee: bool:
+	get: return WeaponConfig.MELEE_WEAPONS.has(weapon_id)
+## 是否是远程武器
+var is_remote: bool:
+	get: return WeaponConfig.REMOTE_WEAPONS.has(weapon_id)
 
 var locked_target: UnitCommon
-
-## 攻击距离
-var attack_range: float:
-	get: return 300.0
+var is_attacking := false
+var is_frozen := false
 
 func get_idle_rotation() -> float:
 	if not belong: return 0
@@ -27,14 +41,11 @@ func rotate_to_target() -> void:
 func get_targets() -> Array[UnitCommon]:
 	if not belong: return []
 	if not Global.game: return []
-	var targets: Array[UnitCommon] = []
+	var targets := Global.game.get_enemies(belong)
 	var result: Array = []
-	targets.assign(Global.game.entities.find_children("*", "UnitCommon", false, false))
 	for item in targets:
-		if item == belong: continue
-		if belong != Global.game.player and item != Global.game.player: continue
 		var distance = belong.global_position.distance_to(item.global_position)
-		if distance > attack_range: continue
+		if distance > stats.attack_range: continue
 		result.append([distance, item])
 	result.sort_custom(func(a: Array, b: Array): return a[0] - b[0])
 	return result.reduce(func(acc: Array, item: Array):
@@ -49,9 +60,20 @@ func release_target() -> void:
 func update_direction() -> void:
 	sprite.flip_v = abs(rotation) > PI / 2
 
+func add_behavior(behavior: WeaponBehavior) -> void:
+	behavior.belong = self
+	behaviors.add_child(behavior)
+
+func _init() -> void:
+	stats = WeaponStats.new()
+
 func _ready() -> void:
 	sprite.frame = weapon_id
+	if is_melee:
+		add_behavior(MeleeWeaponBehavior.new())
 
 func _process(_delta: float) -> void:
+	if not is_instance_valid(locked_target):
+		release_target()
 	rotate_to_target()
 	update_direction()

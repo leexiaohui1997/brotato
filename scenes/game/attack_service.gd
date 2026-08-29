@@ -4,9 +4,9 @@ class_name AttackService
 @export var game: GameNode
 
 ## 触发攻击
-func attack(target: UnitCommon, source: Node2D) -> void:
+func attack(target: UnitCommon, source: Node2D, weapon: Weapon = null) -> void:
 	if not source is UnitCommon: return
-	var ctx := AttackContext.create(game, target, source)
+	var ctx := AttackContext.create(game, target, source, weapon)
 	execute_ctx(ctx)
 
 ## 延迟连锁攻击前校验相关节点是否仍然有效且存活
@@ -52,6 +52,7 @@ func execute_ctx(ctx: AttackContext) -> void:
 				ctx.game,
 				target,
 				source,
+				ctx.weapon,
 				ctx
 			)
 			execute_ctx(combo_ctx)
@@ -66,6 +67,7 @@ func execute_ctx(ctx: AttackContext) -> void:
 				ctx.game,
 				source,
 				target,
+				null,
 				ctx
 			)
 			execute_ctx(counter_ctx)

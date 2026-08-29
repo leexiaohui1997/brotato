@@ -1,8 +1,6 @@
 extends Behavior
 class_name UnitWeaponBehavior
 
-const WEAPON = preload("uid://dgo6wppwqxv7w")
-
 var weapons: Array[Weapon] = []
 var circle_pos := Vector2(0, -UnitBase.UNIT_RADIUS / 2.0)
 var circle_radius := UnitBase.UNIT_RADIUS / 1.0
@@ -36,7 +34,7 @@ func allocate_targets() -> void:
 		if targets.is_empty():
 			item.release_target()
 			continue
-		if not targets.has(item.locked_target):
+		if not item.locked_target or not targets.has(item.locked_target):
 			item.release_target()
 			for target in targets:
 				if allocated.has(target): continue
@@ -46,9 +44,8 @@ func allocate_targets() -> void:
 		allocated.append(item.locked_target)
 
 func _ready() -> void:
-	add_weapon(WEAPON.instantiate())
-	add_weapon(WEAPON.instantiate())
-	add_weapon(WEAPON.instantiate())
+	if weapons.is_empty():
+		add_weapon(Weapon.create())
 
 func _process(_delta: float) -> void:
 	allocate_targets()

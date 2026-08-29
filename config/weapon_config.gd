@@ -23,21 +23,17 @@ enum WeaponType {
 }
 
 ## 近战武器
-var MELEE_WEAPONS: Array[WeaponId] = [
+static var MELEE_WEAPONS: Array[WeaponId] = [
 	WeaponId.PUNCH,
 	WeaponId.AXE,
-	WeaponId.SWORD
-]
-
-## 魔法武器
-var MAGIC_WEAPONS: Array[WeaponId] = [
+	WeaponId.SWORD,
 	WeaponId.CHAINSAW,
 	WeaponId.MACE,
 	WeaponId.WAND
 ]
 
 ## 远程武器
-var REMOTE_WEAPONS: Array[WeaponId] = [
+static var REMOTE_WEAPONS: Array[WeaponId] = [
 	WeaponId.PISTOL,
 	WeaponId.LASER,
 	WeaponId.SMG,

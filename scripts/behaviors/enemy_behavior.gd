@@ -26,7 +26,7 @@ func apply_thrust(direction: Vector2) -> Vector2:
 	if not game: return direction
 	if not game.entities: return direction
 	if direction == Vector2.ZERO: return direction
-	var units = game.entities.find_children("*", "UnitCommon", false, false)
+	var units = game.game_enemies
 	for item: UnitCommon in units:
 		if item == belong or item == player:
 			continue

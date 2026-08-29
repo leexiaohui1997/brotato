@@ -24,4 +24,6 @@ autostart = true
 [node name="AttackService" parent="." unique_id=102567857 node_paths=PackedStringArray("game") instance=ExtResource("2_7h61r")]
 game = NodePath("..")
 
+[connection signal="child_entered_tree" from="Entities" to="." method="_on_entities_child_entered_tree"]
+[connection signal="child_exiting_tree" from="Entities" to="." method="_on_entities_child_exiting_tree"]
 [connection signal="timeout" from="Timers/SpawnEnemyTimer" to="." method="_on_spawn_enemy_timer_timeout"]

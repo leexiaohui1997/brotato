@@ -14,6 +14,8 @@ const CAMERA_ZOOM = 1.5
 @onready var attack_service: AttackService = $AttackService
 @onready var floating_texts: Node2D = $FloatingTexts
 
+var game_enemies: Array[UnitCommon] = []
+
 var map_node: MapGenerate
 var player: UnitCommon
 var camera: Camera2D
@@ -82,8 +84,8 @@ func spawn_enemies(count: int) -> void:
 
 ## 获取初始位置
 func get_born_pos(is_player: bool) -> Vector2i:
-	var units: Array[UnitCommon] = []
-	units.assign(entities.find_children("*", "UnitCommon", false, false))
+	var units: Array[UnitCommon] = game_enemies.slice(0)
+	if player: units.append(player)
 	for i in range(100):
 		var vec := CoordUtils.get_random_pos(map_node.map_start_pos, map_node.map_end_pos, units)
 		if is_player:
@@ -102,6 +104,12 @@ func create_floating_text(target: Node2D, text: String, color: ColorUtils.ColorT
 	instance.global_position = spawn_pos
 	instance.setup(text, ColorUtils.COLOR_PRESETS[color])
 
+## 获取敌对单位
+func get_enemies(source: UnitCommon = player) -> Array[UnitCommon]:
+	if not player: return []
+	if source != player: return [player]
+	return game_enemies.slice(0)
+
 func _ready() -> void:
 	generate_map()
 	generate_player()
@@ -115,3 +123,11 @@ func _exit_tree() -> void:
 
 func _on_spawn_enemy_timer_timeout() -> void:
 	spawn_enemies(3)
+
+func _on_entities_child_entered_tree(node: Node) -> void:
+	if node is UnitCommon and node != player:
+		game_enemies.append(node)
+
+func _on_entities_child_exiting_tree(node: Node) -> void:
+	if node is UnitCommon and node != player:
+		game_enemies.erase(node)

@@ -3,6 +3,7 @@ class_name AttackContext
 var game: GameNode
 var target: UnitCommon
 var source: UnitCommon
+var weapon: Weapon
 
 ## 上一次攻击
 var last_attack: AttackContext
@@ -34,12 +35,14 @@ static func create(
 	_game: GameNode,
 	_target: UnitCommon,
 	_source: UnitCommon,
+	_weapon: Weapon = null,
 	_last_attack: AttackContext = null
 ) -> AttackContext:
 	var ctx := AttackContext.new()
 	ctx.game = _game
 	ctx.target = _target
 	ctx.source = _source
+	ctx.weapon = _weapon
 	ctx.last_attack = _last_attack
 	ctx.setup()
 	return ctx
