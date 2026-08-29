@@ -37,6 +37,7 @@ func generate_player() -> void:
 	player.name = "Player"
 	player.config = UnitConfig.new()
 	player.config.type = player_unit as UnitConfig.UnitType
+	player.stats = UnitStats.create()
 	player.position = born_pos
 	entities.add_child(player)
 	player.add_behavior(UnitWeaponBehavior.new())
@@ -69,6 +70,7 @@ func spawn_enemy() -> void:
 	enemy_uid += 1
 	enemy.config = UnitConfig.new()
 	enemy.config.type = UnitConfig.EnemyUnit.values().pick_random()
+	enemy.stats = UnitStats.create()
 	enemy.position = get_born_pos(false)
 	entities.add_child(enemy)
 	enemy.add_behavior(EnemyBehavior.new())

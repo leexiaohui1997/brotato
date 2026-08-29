@@ -26,16 +26,13 @@ var can_dash: bool:
 var is_dashing: bool:
 	get: return false if not dash_timer else !dash_timer.is_stopped()
 
+## 移动速度
 var speed: float:
 	get:
 		var s := stats.speed
 		if is_dashing:
-			s *= stats.dash_speed_multi
+			s *= GameConstants.DASH_SPEED_MULTI
 		return s
-
-## 攻击力
-var attack_power: int:
-	get: return 1
 
 ## 当前生命
 var health: int = 10:
@@ -111,8 +108,10 @@ func dash() -> void:
 
 func _ready() -> void:
 	create_unit()
-	dash_timer.wait_time = stats.dash_duration
-	dash_cooldown_timer.wait_time = stats.dash_cooldown
+	dash_timer.wait_time = GameConstants.DASH_DURATION
+	dash_cooldown_timer.wait_time = GameConstants.DASH_COOLDOWN
+	max_health = stats.health
+	health = max_health
 
 func _physics_process(delta: float) -> void:
 	if is_died: return

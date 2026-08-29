@@ -5,3 +5,6 @@ static func some(arr: Array, fn: Callable) -> bool:
 		if fn.call(item):
 			return true
 	return false
+
+static func get_chance(chance: float) -> bool:
+	return randf() < chance

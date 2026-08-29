@@ -1,5 +1,9 @@
 class_name GameConstants
 
+## 初始属性点数
+static var INIT_TRAIT_NUM: int:
+	get: return 10
+
 ## 移动速度
 static var MOVE_SPEED: float:
 	get: return 300.0
@@ -18,3 +22,11 @@ static var ENEMY_ATTACK_COOLDOWN: float:
 ## 武器数量上限
 static var WEAPON_LIMIT: int:
 	get: return 6
+
+## 暴击伤害倍率
+static var CRITICAL_DAMAGE_MULTI: float:
+	get: return 1.5
+
+## 格挡减伤比例
+static var BLOCK_DAMAGE_REDUCE: float:
+	get: return 0.5
